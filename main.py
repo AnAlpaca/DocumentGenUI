@@ -24,10 +24,11 @@ class MainWindow(QMainWindow):
         QMainWindow.__init__(self)
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
-
+        
         ## TOGGLE/BURGUER MENU
         ########################################################################
-        self.ui.Btn_Toggle.clicked.connect(lambda: UIFunctions.toggleMenu(self, 250, True))
+        self.ui.Btn_Toggle.clicked.connect(lambda: UIFunctions.toggleMenu(self, 200, True))
+        self.ui.Btn_Menu_3.clicked.connect(lambda: UIFunctions.openSubMenu(self, 250, True))
 
         ## SHOW ==> MAIN WINDOW
         ########################################################################
