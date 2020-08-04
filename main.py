@@ -27,8 +27,14 @@ class MainWindow(QMainWindow):
         
         ## TOGGLE/BURGUER MENU
         ########################################################################
-        self.ui.Btn_Toggle.clicked.connect(lambda: UIFunctions.toggleMenu(self, 200, True))
-        self.ui.Btn_Menu_3.clicked.connect(lambda: UIFunctions.openSubMenu(self, 250, True))
+        #self.ui.Btn_Toggle.clicked.connect(lambda: UIFunctions.toggleMenu(self, 200, True))
+        self.ui.Btn_hpc.clicked.connect(lambda: UIFunctions.openSubMenu(self, 240, self.ui.frame_hpc, True))
+        self.ui.Btn_spc.clicked.connect(lambda: UIFunctions.openSubMenu(self, 240, self.ui.frame_spc, True))
+        self.ui.Btn_dpc.clicked.connect(lambda: UIFunctions.openSubMenu(self, 240, self.ui.frame_dpc, True))
+        self.ui.Btn_ssc.clicked.connect(lambda: UIFunctions.openSubMenu(self, 240, self.ui.frame_ssc, True))
+        self.ui.Btn_alc.clicked.connect(lambda: UIFunctions.openSubMenu(self, 240, self.ui.frame_alc, True))
+        self.ui.Btn_cmt.clicked.connect(lambda: UIFunctions.openSubMenu(self, 240, self.ui.frame_cmt, True))
+        
 
         ## SHOW ==> MAIN WINDOW
         ########################################################################
@@ -39,3 +45,5 @@ if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = MainWindow()
     sys.exit(app.exec_())
+
+
