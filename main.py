@@ -25,7 +25,7 @@ class MainWindow(QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
         
-        ## TOGGLE/BURGUER MENU
+        ## TOGGLE SUB MENUS
         ########################################################################
         #self.ui.Btn_Toggle.clicked.connect(lambda: UIFunctions.toggleMenu(self, 200, True))
         self.ui.Btn_hpc.clicked.connect(lambda: UIFunctions.openSubMenu(self, 240, self.ui.frame_hpc, True))
@@ -34,6 +34,12 @@ class MainWindow(QMainWindow):
         self.ui.Btn_ssc.clicked.connect(lambda: UIFunctions.openSubMenu(self, 240, self.ui.frame_ssc, True))
         self.ui.Btn_alc.clicked.connect(lambda: UIFunctions.openSubMenu(self, 240, self.ui.frame_alc, True))
         self.ui.Btn_cmt.clicked.connect(lambda: UIFunctions.openSubMenu(self, 240, self.ui.frame_cmt, True))
+        
+        
+        ## NAVIGATING PAGES
+        self.ui.Btn_spc_main.clicked.connect(lambda: UIFunctions.handleButton(self, 1))
+        self.ui.Btn_hpc_main.clicked.connect(lambda: UIFunctions.handleButton(self, 0))
+        self.ui.Btn_hpc_mat.clicked.connect(lambda: UIFunctions.handleButton(self, 2))
         
 
         ## SHOW ==> MAIN WINDOW

@@ -94,3 +94,8 @@ class UIFunctions(MainWindow):
             self.animation_subframe_max.setEndValue(heightExpand)
             self.animation_subframe_max.start()
             UIFunctions.closeAllSubMenus(self, ui_element, True)
+
+ 
+
+    def handleButton(self, tab):
+        self.ui.stackedWidget.setCurrentIndex(tab)
